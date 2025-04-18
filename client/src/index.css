@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-primary-600 text-white font-semibold rounded-lg shadow-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-75 transition-all duration-300 relative z-10 cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply py-2 px-4 bg-secondary-200 text-secondary-800 font-semibold rounded-lg shadow-md hover:bg-secondary-300 focus:outline-none focus:ring-2 focus:ring-secondary-400 focus:ring-opacity-75 transition-all duration-300 relative z-10 cursor-pointer;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-secondary-800 rounded-lg shadow-md overflow-hidden transition-all duration-300;
+  }
+  
+  .input {
+    @apply block w-full px-3 py-2 bg-white dark:bg-secondary-700 border border-secondary-300 dark:border-secondary-600 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500;
+  }
+  
+  .label {
+    @apply block text-sm font-medium text-secondary-700 dark:text-secondary-300 mb-1;
+  }
+  
+  .heading-1 {
+    @apply text-3xl font-bold text-secondary-900 dark:text-white;
+  }
+  
+  .heading-2 {
+    @apply text-2xl font-bold text-secondary-800 dark:text-secondary-100;
+  }
+  
+  .heading-3 {
+    @apply text-xl font-semibold text-secondary-800 dark:text-secondary-200;
+  }
+  
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6;
+  }
+  
+  .dashboard-card {
+    @apply p-6 rounded-lg shadow-md bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700 hover:shadow-lg transition-all duration-300;
+  }
+  
+  .stat-card {
+    @apply flex flex-col p-4 bg-white dark:bg-secondary-800 rounded-lg shadow hover:shadow-md transition-all duration-300;
+  }
+  
+  .table-container {
+    @apply w-full overflow-x-auto rounded-lg shadow;
+  }
+  
+  .data-table {
+    @apply min-w-full divide-y divide-secondary-200 dark:divide-secondary-700;
+  }
+  
+  .data-table-head {
+    @apply bg-secondary-50 dark:bg-secondary-900;
+  }
+  
+  .data-table-header {
+    @apply px-6 py-3 text-left text-xs font-medium text-secondary-500 dark:text-secondary-400 uppercase tracking-wider;
+  }
+  
+  .data-table-body {
+    @apply bg-white dark:bg-secondary-800 divide-y divide-secondary-200 dark:divide-secondary-700;
+  }
+  
+  .data-table-row {
+    @apply hover:bg-secondary-50 dark:hover:bg-secondary-700 transition-colors duration-150;
+  }
+  
+  .data-table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-secondary-900 dark:text-secondary-300;
+  }
+}
+
+/* Ensure buttons and interactive elements are always clickable */
+button, 
+a, 
+input[type="submit"], 
+input[type="button"], 
+.btn-primary, 
+.btn-secondary {
+  position: relative !important;
+  z-index: 10 !important;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+.modal-actions {
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
